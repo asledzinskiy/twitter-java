@@ -1,0 +1,4 @@
+Jun 15, 2017 2:25:13 PM TwitterClient sendGet
+INFO: ny i huyna eta java
+Jun 15, 2017 2:25:13 PM BasicTest basicTest
+INFO: another huyovuy message

@@ -18,59 +18,55 @@
  */
 import java.util.ArrayList;
 import java.util.List;
-import java.util.logging.Level;
-import java.util.logging.Logger;
-import java.io.BufferedReader;
 import java.io.IOException;
-import java.io.InputStreamReader;
-
+//import java.util.logging.Logger;
+import org.apache.log4j.Logger;
 import org.apache.http.HttpEntity;
 import org.apache.http.HttpResponse;
-import org.apache.http.client.ClientProtocolException;
-import org.apache.http.client.HttpClient;
 import org.apache.http.client.entity.UrlEncodedFormEntity;
 import org.apache.http.client.methods.HttpGet;
 import org.apache.http.client.methods.HttpPost;
-import org.apache.http.entity.StringEntity;
 import org.apache.http.impl.client.CloseableHttpClient;
-import org.apache.http.impl.client.HttpClientBuilder;
-import org.apache.http.HttpHost;
 import oauth.signpost.OAuthConsumer;
 import oauth.signpost.commonshttp.CommonsHttpOAuthConsumer;
 import oauth.signpost.exception.OAuthCommunicationException;
 import oauth.signpost.exception.OAuthExpectationFailedException;
 import oauth.signpost.exception.OAuthMessageSignerException;
 import org.apache.http.impl.client.HttpClients;
-import org.apache.http.message.BasicHeader;
 import org.apache.http.message.BasicNameValuePair;
-import org.apache.http.protocol.HTTP;
 import org.apache.http.util.EntityUtils;
-import org.json.JSONObject;
-import org.junit.BeforeClass;
 import org.junit.Test;
+import helpers.*;
 
 class BaseHttpClient {
+    CloseableHttpClient httpClient;
+
+    BaseHttpClient() {
+        System.out.println("executing super constructor");
+        httpClient = HttpClients.createDefault();
+    }
 
 }
-class TwitterClient {
+class TwitterClient extends BaseHttpClient {
     String consumerKey = "TgCs2L7UlxzeygG4bvMzO7nMz";
     String consumerSecret = "jbCcTY7NF1qCnPg0BP2UIaVI65AedD08icHXaGhsWaL56zrYjZ";
     String accessToken = "625011534-Fd15DyhL26AdAs82jh9VNhYdqSwdoEWmeZry0JDc";
     String secretToken = "vXLt34KHk2aE5tyth7q4fT8uhSbdludAc4NN1PYstQCjB";
-
-    CloseableHttpClient httpClient;
     OAuthConsumer consumer;
-
     String twitterHost = "https://api.twitter.com/1.1/";
+    //private final static Logger LOGGER = Logger.getLogger(Logger.GLOBAL_LOGGER_NAME);
+    //Logger LOGGER = Logs.getLogger().logger;
+    static Logger LOGGER = Logger.getLogger(TwitterClient.class);
 
-    TwitterClient() {
+    TwitterClient() throws IOException{
+        super();
         System.out.println("setting secret token");
-        httpClient = HttpClients.createDefault();
         consumer = new CommonsHttpOAuthConsumer(consumerKey, consumerSecret);
         consumer.setTokenWithSecret(accessToken, secretToken);
     }
 
     public HttpResponse sendGet(String endpoint) throws IOException {
+        LOGGER.info("ny i huyna eta java");
         HttpGet getRequest = new HttpGet(twitterHost + endpoint);
         try {
             consumer.sign(getRequest);
@@ -135,12 +131,18 @@ class TwitterClient {
 
 public class TwitterTest {
 
-    TwitterClient twitter = new TwitterClient();
-
 
     @Test
     public void create_tweet() throws IOException, org.json.JSONException {
+        try
+        {
+            TwitterClient twitter = new TwitterClient();
+            twitter.sendGet("statuses/home_timeline.json");
+        }
+        catch(IOException e){
+
+        }
         //twitter.create_tweet("test tweet");
-        twitter.sendGet("statuses/home_timeline.json");
+
     }
 }
