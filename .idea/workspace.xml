@@ -2,8 +2,8 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="e3624586-f977-4b7c-8264-4b128fc35942" name="Default" comment="">
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/.idea/libraries/Maven__log4j_log4j_1_2_17.xml" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/main/resources/log4j.properties" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/log.out" afterPath="$PROJECT_DIR$/log.out" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/test/java/BasicTest.java" afterPath="$PROJECT_DIR$/src/test/java/BasicTest.java" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/test/java/TwitterTest.java" afterPath="$PROJECT_DIR$/src/test/java/TwitterTest.java" />
     </list>
     <ignored path="$PROJECT_DIR$/out/" />
@@ -38,23 +38,24 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="TwitterTest.java" pinned="false" current-in-tab="true">
+      <file leaf-file-name="TwitterTest.java" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/test/java/TwitterTest.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="342">
-              <caret line="19" column="22" lean-forward="true" selection-start-line="19" selection-start-column="22" selection-end-line="19" selection-end-column="22" />
+            <state relative-caret-position="468">
+              <caret line="68" column="37" lean-forward="false" selection-start-line="68" selection-start-column="37" selection-end-line="68" selection-end-column="37" />
               <folding>
-                <element signature="e#0#5395#0" expanded="true" />
+                <element signature="e#0#5392#0" expanded="true" />
+                <element signature="imports" expanded="true" />
               </folding>
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="BasicTest.java" pinned="false" current-in-tab="false">
+      <file leaf-file-name="BasicTest.java" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/src/test/java/BasicTest.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="270">
-              <caret line="15" column="56" lean-forward="false" selection-start-line="15" selection-start-column="56" selection-end-line="15" selection-end-column="56" />
+            <state relative-caret-position="342">
+              <caret line="19" column="21" lean-forward="false" selection-start-line="19" selection-start-column="21" selection-end-line="19" selection-end-column="21" />
               <folding>
                 <element signature="imports" expanded="true" />
               </folding>
@@ -657,16 +658,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/test/java/BasicTest.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="270">
-          <caret line="15" column="56" lean-forward="false" selection-start-line="15" selection-start-column="56" selection-end-line="15" selection-end-column="56" />
-          <folding>
-            <element signature="imports" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/log.out">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="36">
@@ -685,10 +676,21 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/src/test/java/TwitterTest.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="342">
-          <caret line="19" column="22" lean-forward="true" selection-start-line="19" selection-start-column="22" selection-end-line="19" selection-end-column="22" />
+        <state relative-caret-position="468">
+          <caret line="68" column="37" lean-forward="false" selection-start-line="68" selection-start-column="37" selection-end-line="68" selection-end-column="37" />
           <folding>
-            <element signature="e#0#5395#0" expanded="true" />
+            <element signature="e#0#5392#0" expanded="true" />
+            <element signature="imports" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/test/java/BasicTest.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="342">
+          <caret line="19" column="21" lean-forward="false" selection-start-line="19" selection-start-column="21" selection-end-line="19" selection-end-column="21" />
+          <folding>
+            <element signature="imports" expanded="true" />
           </folding>
         </state>
       </provider>

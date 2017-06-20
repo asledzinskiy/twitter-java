@@ -66,7 +66,7 @@ class TwitterClient extends BaseHttpClient {
     }
 
     public HttpResponse sendGet(String endpoint) throws IOException {
-        LOGGER.info("ny i huyna eta java");
+        LOGGER.info("java message two");
         HttpGet getRequest = new HttpGet(twitterHost + endpoint);
         try {
             consumer.sign(getRequest);

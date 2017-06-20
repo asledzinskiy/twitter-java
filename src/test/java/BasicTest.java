@@ -17,6 +17,6 @@ public class BasicTest {
     @Test
     public void basicTest() throws IOException{
 
-    LOG.info("another huyovuy message");
+    LOG.info("message");
     }
 }
